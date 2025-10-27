@@ -5,9 +5,10 @@ import joblib
 # ===============================================================
 # Load Model and Encoder
 # ===============================================================
-model = joblib.load("C://Users//Komal//Desktop//Unemployment predictor//unemployment_model_state.pkl")
-encoder = joblib.load("C://Users//Komal//Desktop//Unemployment predictor//state_encoder.pkl")
-
+model_path = os.path.join(os.path.dirname(__file__), "unemployment_model_state.pkl")
+model = joblib.load(model_path)
+encoder_path = os.path.join(os.path.dirname(__file__), "state_encoder.pkl")
+encoder = joblib.load(encoder_path)
 # ===============================================================
 # Streamlit Web App
 # ===============================================================
